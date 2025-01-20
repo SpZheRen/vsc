@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Spring Rolls</title>
+    <link rel="stylesheet" href="./css/item-styles.css">
+</head>
+<body>
+
+<header>
+    <h1>Spring Rolls</h1>
+</header>
+
+<div class="item-details">
+    <img src="./images/Thai-Veggie-Spring-Rolls_done.png" alt="thai spring rolls" height="400px" width="400px">
+    <p>Price: $5.99</p>
+    <p>Description: Crispy spring rolls filled with fresh vegetables and served with a tangy dipping sauce.</p>
+    
+    <form action="add-to-cart.php" method="POST">
+        <label for="portion-size">Portion Size:</label>
+        <select id="portion-size" name="portion-size">
+            <option value="small">Small 50g</option>
+            <option value="medium">Medium 100g</option>
+            <option value="large">Large 150g</option>
+        </select>
+        
+        <label for="extra-options">Extra Options:</label>
+        <div>
+            <label for="extra-sauce">Extra Sauce</label>
+            <input type="checkbox" id="extra-sauce" name="options[]" value="extra-sauce">
+        </div>
+        <div>
+            <label for="spicy">Make it Spicy</label>
+            <input type="checkbox" id="spicy" name="options[]" value="spicy">
+        </div>
+        
+        <button type="submit">Place Order</button>
+    </form>
+</div>
+
+<footer>
+    <p>&copy; 2025 Restaurant Name | All rights reserved</p>
+</footer>
+
+</body>
+</html>
