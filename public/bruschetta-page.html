@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bruschetta - Menu</title>
+    <link rel="stylesheet" href="./css/item-styles.css">
+</head>
+<body>
+
+<header>
+    <h1>Bruschetta</h1>
+</header>
+
+<div class="item-details">
+    <img src="./images/bruschetta.jpg" alt="Bruschetta" height="400px" width="400px">
+    <p>Price: $6.99</p>
+    <p>Description: Crispy toasted bread topped with fresh tomatoes, basil, garlic, and balsamic glaze.</p>
+    
+    <form>
+        <label for="portion-size">Portion Size:</label>
+        <select id="portion-size" name="portion-size">
+            <option value="small">Small (4 pieces)</option>
+            <option value="medium">Medium (6 pieces)</option>
+            <option value="large">Large (8 pieces)</option>
+        </select>
+        
+        <label for="extra-options">Extra Options:</label>
+        <div>
+            <label for="extra-basil">Extra Basil</label>
+            <input type="checkbox" id="extra-basil" name="options[]" value="extra-basil">
+        </div>
+        <div>
+            <label for="extra-garlic">Extra Garlic</label>
+            <input type="checkbox" id="extra-garlic" name="options[]" value="extra-garlic">
+        </div>
+        <div>
+            <label for="extra-balsamic">Extra Balsamic Glaze</label>
+            <input type="checkbox" id="extra-balsamic" name="options[]" value="extra-balsamic">
+        </div>
+        
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" value="1" min="1" max="10">
+    
+        <button type="submit">Place Order</button>
+    </form>
+    
+    <!-- Back Button -->
+    <button id="back-button" onclick="history.back()">Go Back</button>     
+</div>
+
+<footer>
+    <p>&copy; 2025 Restaurant Name | All rights reserved</p>
+</footer>
+
+</body>
+</html>

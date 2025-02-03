@@ -18,12 +18,14 @@
     <p>Price: $5.99</p>
     <p>Description: Crispy spring rolls filled with fresh vegetables and served with a tangy dipping sauce.</p>
     
-    <form action="add-to-cart.php" method="POST">
+    <form>
         <label for="portion-size">Portion Size:</label>
         <select id="portion-size" name="portion-size">
+            <option value="xsmall">Extra Small 25g</option>
             <option value="small">Small 50g</option>
             <option value="medium">Medium 100g</option>
             <option value="large">Large 150g</option>
+            <option value="xlarge">Extra Large 200g</option>
         </select>
         
         <label for="extra-options">Extra Options:</label>
@@ -35,9 +37,27 @@
             <label for="spicy">Make it Spicy</label>
             <input type="checkbox" id="spicy" name="options[]" value="spicy">
         </div>
+        <div>
+            <label for="gluten-free">Gluten-Free Wrapping</label>
+            <input type="checkbox" id="gluten-free" name="options[]" value="gluten-free">
+        </div>
+        <div>
+            <label for="extra-veggies">Extra Vegetables</label>
+            <input type="checkbox" id="extra-veggies" name="options[]" value="extra-veggies">
+        </div>
+        <div>
+            <label for="double-filling">Double Filling</label>
+            <input type="checkbox" id="double-filling" name="options[]" value="double-filling">
+        </div>
         
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" value="1" min="1" max="10">
+    
         <button type="submit">Place Order</button>
     </form>
+    
+    <!-- Back Button -->
+    <button id="back-button" onclick="history.back()">Go Back</button>     
 </div>
 
 <footer>
